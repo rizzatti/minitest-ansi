@@ -1,5 +1,5 @@
-module Minitest
-  module Ansi
-    VERSION = '0.0.1'
+module MiniTest
+  module AnsiVersion
+    VERSION = '0.0.1pre'
   end
 end

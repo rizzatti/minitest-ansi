@@ -1,4 +1,4 @@
-# Minitest::Ansi
+# MiniTest::Ansi
 
 TODO: Write a gem description
 

@@ -1,6 +1,6 @@
 require 'minitest/ansi/version'
 
-module Minitest
+module MiniTest
   module Ansi
   end
 end
