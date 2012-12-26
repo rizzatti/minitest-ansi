@@ -7,15 +7,19 @@ module MiniTest
     before { @output = MiniTest::Unit.output }
     after { MiniTest::Unit.output = @output }
 
-    it 'has a version number' do
-      MiniTest::Ansi::VERSION.must_equal MiniTest::AnsiVersion::VERSION
-    end
+    describe "class" do
+      subject { Ansi }
 
-    it 'changes minitest output with use!' do
-      subject = Ansi.new
-      subject.object_id.wont_be_same_as MiniTest::Unit.output.object_id
-      subject.use!
-      subject.object_id.must_be_same_as MiniTest::Unit.output.object_id
+      it 'has a version number' do
+        subject::VERSION.must_equal AnsiVersion::VERSION
+      end
+
+      it 'changes minitest output with use!' do
+        output = subject.use!
+        output.object_id.must_be_same_as MiniTest::Unit.output.object_id
+        output.must_respond_to :print
+        output.must_respond_to :puts
+      end
     end
 
     describe 'printing chars' do

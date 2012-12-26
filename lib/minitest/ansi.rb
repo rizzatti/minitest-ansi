@@ -34,8 +34,8 @@ module MiniTest
       __getobj__.puts(*args)
     end
 
-    def use!
-      MiniTest::Unit.output = self
+    def self.use!
+      MiniTest::Unit.output = new
     end
   end
 end
