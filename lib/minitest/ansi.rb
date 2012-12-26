@@ -25,6 +25,15 @@ module MiniTest
       end
     end
 
+    def puts(*args)
+      if args.any?
+        args.first.gsub!(/[1-9]\d* failures/, ANSI[:yellow] + "\\0" + ANSI[:clear])
+        args.first.gsub!(/[1-9]\d* errors/, ANSI[:red] + "\\0" + ANSI[:clear])
+        args.first.gsub!(/[1-9]\d* skips/, ANSI[:cyan] + "\\0" + ANSI[:clear])
+      end
+      __getobj__.puts(*args)
+    end
+
     def use!
       MiniTest::Unit.output = self
     end

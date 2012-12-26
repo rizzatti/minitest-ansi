@@ -22,11 +22,9 @@ module MiniTest
       subject { Ansi.new(StringIO.new) }
 
       def check_output(input, output)
-        subject.instance_eval do
-          print input
-          rewind
-          read.must_equal output
-        end
+        subject.print input
+        subject.rewind
+        subject.read.must_equal output
       end
 
       it 'prints . in green' do
@@ -43,6 +41,38 @@ module MiniTest
 
       it 'prints S in cyan' do
         check_output('S', "\e[36mS\e[0m")
+      end
+    end
+
+    describe 'printing the status' do
+      subject { Ansi.new(StringIO.new) }
+
+      def check_output(input, output)
+        subject.puts input
+        subject.rewind
+        subject.read.must_match output
+      end
+
+      it 'prints failures in yellow' do
+        check_output('1 failures', "\e[33m1 failures\e[0m")
+      end
+
+      it 'print error in red' do
+        check_output('3 errors', "\e[31m3 errors\e[0m")
+      end
+
+      it 'prints skips in cyan' do
+        check_output('2 skips', "\e[36m2 skips\e[0m")
+      end
+
+      it 'does not colorize when there are no problems' do
+        input = '0 failures, 0 errors, 0 skips'
+        subject.puts input
+        subject.rewind
+        output = subject.read
+        output.wont_match "\e[33m"
+        output.wont_match "\e[36m"
+        output.wont_match "\e[31m"
       end
     end
   end
