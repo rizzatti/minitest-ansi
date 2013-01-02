@@ -1,4 +1,4 @@
-# MiniTest::Ansi
+# MiniTest::ANSI
 
 Colorize your minitest output using ANSI colors.
 
@@ -19,7 +19,7 @@ Or install it yourself as:
 ## Usage
 
     require 'minitest/ansi'
-    MiniTest::Ansi.use!
+    MiniTest::ANSI.use!
 
 ## Contributing
 

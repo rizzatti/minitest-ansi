@@ -3,15 +3,15 @@ require 'minitest/ansi'
 require 'stringio'
 
 module MiniTest
-  describe Ansi do
+  describe ANSI do
     before { @output = MiniTest::Unit.output }
     after { MiniTest::Unit.output = @output }
 
     describe "class" do
-      subject { Ansi }
+      subject { ANSI }
 
       it 'has a version number' do
-        subject::VERSION.must_equal AnsiVersion::VERSION
+        subject::VERSION.must_equal ANSIVersion::VERSION
       end
 
       it 'changes minitest output with use!' do
@@ -23,7 +23,7 @@ module MiniTest
     end
 
     describe 'printing chars' do
-      subject { Ansi.new(StringIO.new) }
+      subject { ANSI.new(StringIO.new) }
 
       def check_output(input, output)
         subject.print input
@@ -49,7 +49,7 @@ module MiniTest
     end
 
     describe 'printing each problem' do
-      subject { Ansi.new(StringIO.new) }
+      subject { ANSI.new(StringIO.new) }
 
       it 'prints failures in yellow' do
         subject.puts '1) Failure'
@@ -71,7 +71,7 @@ module MiniTest
     end
 
     describe 'printing the status' do
-      subject { Ansi.new(StringIO.new) }
+      subject { ANSI.new(StringIO.new) }
 
       def check_output(input, output)
         subject.puts input

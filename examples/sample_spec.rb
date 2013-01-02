@@ -2,7 +2,7 @@ require 'minitest/spec'
 require 'minitest/autorun'
 require 'minitest/ansi'
 
-MiniTest::Ansi.use!
+MiniTest::ANSI.use!
 
 describe "Sample" do
   10.times do

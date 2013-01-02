@@ -6,7 +6,7 @@ require 'minitest/ansi/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'minitest-ansi'
-  gem.version       = MiniTest::AnsiVersion::VERSION
+  gem.version       = MiniTest::ANSIVersion::VERSION
   gem.authors       = ['Zeh Rizzatti']
   gem.email         = ['zehrizzatti@gmail.com']
   gem.description   = %q{Colorizes minitest output with ANSI codes}
