@@ -1,6 +1,6 @@
 # MiniTest::Ansi
 
-TODO: Write a gem description
+Colorize your minitest output using ANSI colors.
 
 ## Installation
 
@@ -18,7 +18,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'minitest/ansi'
+    MiniTest::Ansi.use!
 
 ## Contributing
 
