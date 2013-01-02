@@ -27,6 +27,9 @@ module MiniTest
 
     def puts(*args)
       if args.any?
+        args.first.gsub!(/\d+\) Failure/, ANSI[:yellow] + "\\0" + ANSI[:clear])
+        args.first.gsub!(/\d+\) Error/, ANSI[:red] + "\\0" + ANSI[:clear])
+        args.first.gsub!(/\d+\) Skipped/, ANSI[:cyan] + "\\0" + ANSI[:clear])
         args.first.gsub!(/[1-9]\d* failures/, ANSI[:yellow] + "\\0" + ANSI[:clear])
         args.first.gsub!(/[1-9]\d* errors/, ANSI[:red] + "\\0" + ANSI[:clear])
         args.first.gsub!(/[1-9]\d* skips/, ANSI[:cyan] + "\\0" + ANSI[:clear])

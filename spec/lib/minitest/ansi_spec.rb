@@ -48,6 +48,28 @@ module MiniTest
       end
     end
 
+    describe 'printing each problem' do
+      subject { Ansi.new(StringIO.new) }
+
+      it 'prints failures in yellow' do
+        subject.puts '1) Failure'
+        subject.rewind
+        subject.read.must_match "\e[33m1) Failure\e[0m"
+      end
+
+      it 'prints errors in red' do
+        subject.puts '1) Error'
+        subject.rewind
+        subject.read.must_match "\e[31m1) Error\e[0m"
+      end
+
+      it 'prints skippeds in cyan' do
+        subject.puts '1) Skipped'
+        subject.rewind
+        subject.read.must_match "\e[36m1) Skipped\e[0m"
+      end
+    end
+
     describe 'printing the status' do
       subject { Ansi.new(StringIO.new) }
 
