@@ -2,6 +2,8 @@
 
 Colorize your minitest output using ANSI colors.
 
+![Screenshot](https://github.com/zehrizzatti/minitest-ansi/raw/master/images/screenshot.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
