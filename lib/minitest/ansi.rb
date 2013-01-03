@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'minitest/ansi/version'
 require 'delegate'
 require 'ansi'
@@ -6,33 +8,37 @@ module MiniTest
   class ANSI < ::SimpleDelegator
     include ANSIVersion
 
+    TEST_REGEX = /\d+(\)| tests)/
+    MAPPING = [
+      [/[1-9]\d*\)? (F|f)ailures?/, :yellow],
+      [/[1-9]\d*\)? (E|e)rrors?/, :red],
+      [/[1-9]\d*\)? (S|s)kip(ped|s)/, :cyan],
+    ]
+
     def initialize(stream=MiniTest::Unit.output)
       super
     end
 
     def print(*args)
-      case args.first
-      when '.'
-        __getobj__.print(::ANSI[:green] + '.' + ::ANSI[:clear])
-      when 'F'
-        __getobj__.print(::ANSI[:yellow] + 'F' + ::ANSI[:clear])
-      when 'E'
-        __getobj__.print(::ANSI[:red] + 'E' + ::ANSI[:clear])
-      when 'S'
-        __getobj__.print(::ANSI[:cyan] + 'S' + ::ANSI[:clear])
+      char = args.first
+      color = case char
+      when '.'; then :green
+      when 'F'; then :yellow
+      when 'E'; then :red
+      when 'S'; then :cyan
       else
         __getobj__.print(*args)
+        return
       end
+      __getobj__.print(::ANSI[color] + char + ::ANSI[:clear])
     end
 
     def puts(*args)
-      if args.any?
-        args.first.gsub!(/\d+\) Failure/, ::ANSI[:yellow] + "\\0" + ::ANSI[:clear])
-        args.first.gsub!(/\d+\) Error/, ::ANSI[:red] + "\\0" + ::ANSI[:clear])
-        args.first.gsub!(/\d+\) Skipped/, ::ANSI[:cyan] + "\\0" + ::ANSI[:clear])
-        args.first.gsub!(/[1-9]\d* failures/, ::ANSI[:yellow] + "\\0" + ::ANSI[:clear])
-        args.first.gsub!(/[1-9]\d* errors/, ::ANSI[:red] + "\\0" + ::ANSI[:clear])
-        args.first.gsub!(/[1-9]\d* skips/, ::ANSI[:cyan] + "\\0" + ::ANSI[:clear])
+      str = args.first
+      if str && (str =~ TEST_REGEX) != nil
+        MAPPING.each do |regex, color|
+          str.gsub!(regex, ::ANSI[color] + "\\0" + ::ANSI[:clear])
+        end
       end
       __getobj__.puts(*args)
     end
