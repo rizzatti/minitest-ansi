@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Colorizes minitest output with ANSI codes}
   gem.summary       = %q{Colors for minitest output}
   gem.homepage      = 'https://github.com/zehrizzatti/minitest-ansi'
-  gem.files         = `git ls-files`.split($/)
+  gem.files         = Dir['{lib,spec}/**/*.rb', 'README.md', 'LICENSE.txt']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
