@@ -17,6 +17,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
   gem.add_runtime_dependency 'ansi', '~> 1.4.0'
-  gem.add_runtime_dependency 'minitest', '~> 4.3.0'
+  gem.add_runtime_dependency 'minitest', '~> 4.3'
   gem.add_development_dependency 'rake'
 end
