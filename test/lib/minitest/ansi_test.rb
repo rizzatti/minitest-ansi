@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative '../../test_helper'
 require 'minitest/ansi'
 require 'stringio'
 
