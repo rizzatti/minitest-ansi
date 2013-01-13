@@ -1,4 +1,4 @@
-require_relative '../../test_helper'
+require 'test_helper'
 require 'minitest/ansi'
 require 'stringio'
 
@@ -24,7 +24,7 @@ module MiniTest
       subject { ANSI.new(StringIO.new) }
 
       def assert_io(method, input, output)
-        subject.public_send method, input
+        subject.send method, input
         subject.rewind
         subject.read.must_equal output
       end
