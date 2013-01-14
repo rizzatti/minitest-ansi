@@ -1,4 +1,4 @@
-# MiniTest::ANSI
+# MiniTest::ANSI ![Travis CI](https://travis-ci.org/zehrizzatti/minitest-ansi.png)
 
 Colorize your minitest output using ANSI colors.
 
