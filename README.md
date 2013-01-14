@@ -1,8 +1,8 @@
-# MiniTest::ANSI ![Travis CI](https://travis-ci.org/zehrizzatti/minitest-ansi.png)
+# MiniTest::ANSI [![Travis CI][build-status]][travis]
 
 Colorize your minitest output using ANSI colors.
 
-![Screenshot](https://github.com/zehrizzatti/minitest-ansi/raw/master/images/screenshot.png)
+![Screenshot][screenshot]
 
 ## Installation
 
@@ -30,3 +30,7 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+[build-status]: https://travis-ci.org/zehrizzatti/minitest-ansi.png "Build status"
+[screenshot]: https://github.com/zehrizzatti/minitest-ansi/raw/master/images/screenshot.png "Minitest::Ansi"
+[travis]: https://travis-ci.org/zehrizzatti/minitest-ansi "Travis CI"
