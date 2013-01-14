@@ -1,4 +1,4 @@
-# MiniTest::ANSI [![Travis CI][build-status]][travis]
+# MiniTest::ANSI [![Build Status][build-status]][travis]
 
 Colorize your minitest output using ANSI colors.
 
@@ -8,20 +8,33 @@ Colorize your minitest output using ANSI colors.
 
 Add this line to your application's Gemfile:
 
-    gem 'minitest-ansi'
+```ruby
+group :development do
+  gem 'minitest-ansi'
+end
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install minitest-ansi
+```bash
+$ gem install minitest-ansi
+```
 
 ## Usage
 
-    require 'minitest/ansi'
-    MiniTest::ANSI.use!
+You probably want to add this to your `test_helper.rb` (or equivalent).
+
+```ruby
+require 'minitest/ansi'
+
+MiniTest::ANSI.use!
+```
 
 ## Contributing
 
