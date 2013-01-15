@@ -1,6 +1,12 @@
-# MiniTest::ANSI [![Build Status][build-status]][travis]
+# MiniTest::ANSI
 
 Colorize your minitest output using ANSI colors.
+
+[![Build Status][travis-badge]][travis-site]
+[![Dependency Status][gemnasium-badge]][gemnasium-site]
+[![Code Climate][cc-badge]][cc-site]
+
+## How it looks
 
 ![Screenshot][screenshot]
 
@@ -44,6 +50,10 @@ MiniTest::ANSI.use!
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-[build-status]: https://travis-ci.org/zehrizzatti/minitest-ansi.png "Build status"
-[screenshot]: https://github.com/zehrizzatti/minitest-ansi/raw/master/images/screenshot.png "Minitest::Ansi"
-[travis]: https://travis-ci.org/zehrizzatti/minitest-ansi "Travis CI"
+[cc-badge]: https://codeclimate.com/badge.png
+[cc-site]: https://codeclimate.com/github/zehrizzatti/minitest-ansi
+[gemnasium-badge]: https://gemnasium.com/zehrizzatti/minitest-ansi.png
+[gemnasium-site]: https://gemnasium.com/zehrizzatti/minitest-ansi
+[screenshot]: https://github.com/zehrizzatti/minitest-ansi/raw/master/images/screenshot.png
+[travis-badge]: https://travis-ci.org/zehrizzatti/minitest-ansi.png
+[travis-site]: https://travis-ci.org/zehrizzatti/minitest-ansi
