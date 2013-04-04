@@ -1,10 +1,12 @@
 # MiniTest::ANSI
 
-Colorize your minitest output using ANSI colors.
-
 [![Build Status][travis-badge]][travis-site]
 [![Dependency Status][gemnasium-badge]][gemnasium-site]
 [![Code Climate][cc-badge]][cc-site]
+
+Colorize your minitest output using ANSI colors.
+
+Tested under MRI 1.8, 1.9 and 2.0, JRuby and Rubinius.
 
 ## How it looks
 
@@ -15,7 +17,7 @@ Colorize your minitest output using ANSI colors.
 Add this line to your application's Gemfile:
 
 ```ruby
-group :development do
+group :test do
   gem 'minitest-ansi'
 end
 ```
@@ -26,7 +28,7 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
+Or install it yourself:
 
 ```bash
 $ gem install minitest-ansi
