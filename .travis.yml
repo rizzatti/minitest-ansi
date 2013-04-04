@@ -24,10 +24,10 @@ matrix:
       - ree
   include:
     - rvm: 1.8.7
-      gemfile:
-        - gemfiles/ansi13minitest25.gemfile
-        - gemfiles/ansi13minitest3.gemfile
+      gemfile: gemfiles/ansi13minitest25.gemfile
+    - rvm: 1.8.7
+      gemfile: gemfiles/ansi13minitest3.gemfile
     - rvm: 1.9.3
-      gemfile:
-        - gemfiles/ansi13minitest25.gemfile
-        - gemfiles/ansi13minitest3.gemfile
+      gemfile: gemfiles/ansi13minitest25.gemfile
+    - rvm: 1.9.3
+      gemfile: gemfiles/ansi13minitest3.gemfile
