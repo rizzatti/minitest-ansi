@@ -7,11 +7,11 @@ require 'minitest/ansi/version'
 Gem::Specification.new do |gem|
   gem.name          = 'minitest-ansi'
   gem.version       = MiniTest::ANSIVersion::VERSION
-  gem.authors       = ['Zeh Rizzatti']
+  gem.authors       = ['José Otávio Rizzatti']
   gem.email         = ['zehrizzatti@gmail.com']
   gem.description   = %q{Colorizes minitest output with ANSI codes}
   gem.summary       = %q{Colors for minitest output}
-  gem.homepage      = 'https://github.com/zehrizzatti/minitest-ansi'
+  gem.homepage      = 'https://github.com/rizzatti/minitest-ansi'
   gem.files         = Dir['{lib,spec}/**/*.rb', 'README.md', 'LICENSE.txt']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})

@@ -51,9 +51,9 @@ MiniTest::ANSI.use!
 5. Create new Pull Request
 
 [cc-badge]: https://codeclimate.com/badge.png
-[cc-site]: https://codeclimate.com/github/zehrizzatti/minitest-ansi
-[gemnasium-badge]: https://gemnasium.com/zehrizzatti/minitest-ansi.png
-[gemnasium-site]: https://gemnasium.com/zehrizzatti/minitest-ansi
-[screenshot]: https://github.com/zehrizzatti/minitest-ansi/raw/master/images/screenshot.png
-[travis-badge]: https://travis-ci.org/zehrizzatti/minitest-ansi.png
-[travis-site]: https://travis-ci.org/zehrizzatti/minitest-ansi
+[cc-site]: https://codeclimate.com/github/rizzatti/minitest-ansi
+[gemnasium-badge]: https://gemnasium.com/rizzatti/minitest-ansi.png
+[gemnasium-site]: https://gemnasium.com/rizzatti/minitest-ansi
+[screenshot]: https://github.com/rizzatti/minitest-ansi/raw/master/images/screenshot.png
+[travis-badge]: https://travis-ci.org/rizzatti/minitest-ansi.png
+[travis-site]: https://travis-ci.org/rizzatti/minitest-ansi
