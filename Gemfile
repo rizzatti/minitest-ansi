@@ -7,5 +7,8 @@ group :development do
   gem 'm', :platform => :ruby_19
   gem 'pry'
   gem 'travis-lint'
+end
+
+group :test do
   gem 'rake'
 end
