@@ -4,6 +4,7 @@
 [![Build Status][travis-badge]][travis-site]
 [![Dependency Status][gemnasium-badge]][gemnasium-site]
 [![Code Climate][cc-badge]][cc-site]
+[![Coverage Status][coveralls-badge]][coveralls-site]
 
 Colorize your minitest output using ANSI colors.
 
@@ -57,6 +58,8 @@ MiniTest::ANSI.use!
 [badge-fury-site]: http://badge.fury.io/rb/minitest-ansi
 [cc-badge]: https://codeclimate.com/badge.png
 [cc-site]: https://codeclimate.com/github/rizzatti/minitest-ansi
+[coveralls-badge]: https://coveralls.io/repos/rizzatti/minitest-ansi/badge.png?branch=master
+[coveralls-site]: https://coveralls.io/r/rizzatti/minitest-ansi
 [gemnasium-badge]: https://gemnasium.com/rizzatti/minitest-ansi.png
 [gemnasium-site]: https://gemnasium.com/rizzatti/minitest-ansi
 [screenshot]: https://github.com/rizzatti/minitest-ansi/raw/master/images/screenshot.png
