@@ -1,5 +1,6 @@
 # MiniTest::ANSI
 
+[![Gem Version][badge-fury-badge]][badge-fury-site]
 [![Build Status][travis-badge]][travis-site]
 [![Dependency Status][gemnasium-badge]][gemnasium-site]
 [![Code Climate][cc-badge]][cc-site]
@@ -52,6 +53,8 @@ MiniTest::ANSI.use!
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+[badge-fury-badge]: https://badge.fury.io/rb/minitest-ansi.png
+[badge-fury-site]: http://badge.fury.io/rb/minitest-ansi
 [cc-badge]: https://codeclimate.com/badge.png
 [cc-site]: https://codeclimate.com/github/rizzatti/minitest-ansi
 [gemnasium-badge]: https://gemnasium.com/rizzatti/minitest-ansi.png
