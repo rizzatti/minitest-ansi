@@ -56,7 +56,7 @@ MiniTest::ANSI.use!
 
 [badge-fury-badge]: https://badge.fury.io/rb/minitest-ansi.png
 [badge-fury-site]: http://badge.fury.io/rb/minitest-ansi
-[cc-badge]: https://codeclimate.com/badge.png
+[cc-badge]: https://codeclimate.com/github/rizzatti/minitest-ansi.png
 [cc-site]: https://codeclimate.com/github/rizzatti/minitest-ansi
 [coveralls-badge]: https://coveralls.io/repos/rizzatti/minitest-ansi/badge.png?branch=master
 [coveralls-site]: https://coveralls.io/r/rizzatti/minitest-ansi
