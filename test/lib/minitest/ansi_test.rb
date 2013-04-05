@@ -53,6 +53,10 @@ module MiniTest
         it 'prints S in cyan' do
           assert_print 'S', "\e[36mS\e[0m"
         end
+
+        it 'prints everything else without colors' do
+          assert_print 'x', 'x'
+        end
       end
 
       describe 'describing each problem' do
