@@ -16,6 +16,8 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
+  gem.license       = 'MIT'
+  gem.platform      = Gem::Platform::RUBY
   gem.add_runtime_dependency 'ansi', '~> 1.3'
   gem.add_runtime_dependency 'minitest', '>= 2.5'
 end
