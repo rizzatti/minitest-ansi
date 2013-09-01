@@ -19,5 +19,5 @@ Gem::Specification.new do |gem|
   gem.license       = 'MIT'
   gem.platform      = Gem::Platform::RUBY
   gem.add_runtime_dependency 'ansi', '~> 1.3'
-  gem.add_runtime_dependency 'minitest', '>= 2.5'
+  gem.add_runtime_dependency 'minitest', '>= 2.5', '< 5.0'
 end
