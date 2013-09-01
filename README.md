@@ -10,6 +10,11 @@ Colorize your minitest output using ANSI colors.
 
 Tested under MRI 1.8, 1.9 and 2.0, JRuby and Rubinius.
 
+## Versioning
+
+Minitest-ansi 0.1.x series should work with minitest up to 4.x.  
+Minitest-ansi 0.2.x is expected to work with minitest 5.x.
+
 ## How it looks
 
 ![Screenshot][screenshot]
