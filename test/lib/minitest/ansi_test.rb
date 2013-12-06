@@ -86,14 +86,9 @@ module MiniTest
           assert_puts '5 tests, 2 skips', "5 tests, \e[36m2 skips\e[0m"
         end
 
-        it 'does not colorize when there are no problems' do
-          input = '99 tests, 0 failures, 0 errors, 0 skips'
-          subject.puts input
-          subject.rewind
-          output = subject.read
-          output.wont_match "\e[33m"
-          output.wont_match "\e[36m"
-          output.wont_match "\e[31m"
+        it 'print the line in green when there are no problems' do
+          input = '99 tests, 99 assertions, 0 failures, 0 errors, 0 skips'
+          assert_puts input, "\e[32m#{input}\e[0m"
         end
       end
     end

@@ -8,6 +8,7 @@ module MiniTest
   class ANSI < ::SimpleDelegator
     include ANSIVersion
 
+    STATUS_REGEX = /\d+ tests, \d+ assertions, (\d+) failures, (\d+) errors, (\d+) skips/
     TEST_REGEX = /\d+(\)| tests)/
     MAPPING = [
       [/[1-9]\d*\)? (F|f)ailures?/, :yellow],
@@ -35,7 +36,9 @@ module MiniTest
 
     def puts(*args)
       str = args.first
-      if str && (str =~ TEST_REGEX) != nil
+      if str && (str =~ STATUS_REGEX) != nil && ($1 == '0' && $2 == '0' && $3 == '0')
+        str.replace(::ANSI.green{ str })
+      elsif str && (str =~ TEST_REGEX) != nil
         MAPPING.each do |regex, color|
           str.gsub!(regex, ::ANSI[color] + "\\0" + ::ANSI[:clear])
         end
